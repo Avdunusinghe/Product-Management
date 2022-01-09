@@ -12,6 +12,8 @@ mongoose
   .then(() => {
     console.log("Connect mongo");
   });
+
+app.use("/api/product", require("./routes/Product.route"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
