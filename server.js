@@ -15,7 +15,10 @@ mongoose
 
 app.use("/api/product", require("./routes/Product.route"));
 const PORT = process.env.PORT || 5000;
+const swaggerUi = require("swagger-ui-express"),
+  swaggerDocument = require("./swagger.json");
 
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.listen(PORT, () => {
   console.log("Server is Running");
 });
