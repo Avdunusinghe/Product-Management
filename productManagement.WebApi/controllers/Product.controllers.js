@@ -1,4 +1,4 @@
-const Product = require("../models/Product.model");
+const Product = require("../../productManagement.Models/models/Product.model");
 
 const saveProduct = (request, response) => {
   const { name, companyName, discription } = request.body;
