@@ -10,3 +10,5 @@ router.post("/add", saveProduct);
 router.get("/all", getAllProductDetails);
 
 module.exports = router;
+
+//common js
